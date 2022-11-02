@@ -1,11 +1,13 @@
+import styles from './Header.module.scss'
+
 function Header(){
 	return (
-    <header className="d-flex justify-between align-center p-40">
-      <div className="d-flex align-center">
-        <img width={40} height={40} src="/img/header-logo.png" alt="logo" />
+    <header className={styles.header}>
+      <div className={styles.headerContent}>
+        <img className={styles.headerLogo} width={40} height={40} src="/img/header-logo.png" alt="logo" />
         <div>
-          <h3 className="text-uppercase">REACT SNEAKERS</h3>
-          <p>Магазин лучших кроссовок</p>
+          <h3 className={styles.headerName}>REACT SNEAKERS</h3>
+          <p className={styles.headerParagraph}>Магазин лучших кроссовок</p>
         </div>
       </div>
       <ul className="d-flex">
@@ -17,7 +19,7 @@ function Header(){
             src="/img/cart.svg"
             alt="cart"
           />
-          <span>1205 руб.</span>
+          <span className={styles.headerPrice}>1205 руб.</span>
         </li>
         <li className="d-flex align-center">
           <img width={18} height={18} src="/img/user.svg" alt="user" />
