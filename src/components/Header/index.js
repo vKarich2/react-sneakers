@@ -1,17 +1,26 @@
 import styles from './Header.module.scss'
 
-function Header(){
+function Header(props){
 	return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
-        <img className={styles.headerLogo} width={40} height={40} src="/img/header-logo.png" alt="logo" />
+        <img
+          className={styles.headerLogo}
+          width={40}
+          height={40}
+          src="/img/header-logo.png"
+          alt="logo"
+        />
         <div>
           <h3 className={styles.headerName}>REACT SNEAKERS</h3>
           <p className={styles.headerParagraph}>Магазин лучших кроссовок</p>
         </div>
       </div>
       <ul className="d-flex">
-        <li className="d-flex align-center mr-30">
+        <li
+          className="d-flex align-center mr-30 cu-p"
+          onClick={props.onClickCart}
+        >
           <img
             width={18}
             height={18}
@@ -21,7 +30,10 @@ function Header(){
           />
           <span className={styles.headerPrice}>1205 руб.</span>
         </li>
-        <li className="d-flex align-center">
+        <li className="d-flex align-center mr-30">
+          <img width={18} height={18} src="/img/fav.svg" alt="favourites" />
+        </li>
+        <li className="d-flex align-center mr-30">
           <img width={18} height={18} src="/img/user.svg" alt="user" />
         </li>
       </ul>

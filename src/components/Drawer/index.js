@@ -1,8 +1,10 @@
 import styles from './Drawer.module.scss'
 
-function Drawer(){
+function Drawer(props){
+  
+
 	return (
-    <div style={{ display: "none" }} className={styles.drawerOverlay}>
+    <div className={styles.drawerOverlay}>
       <div className={styles.drawer}>
         <div className={styles.scrolling}>
           <h2 className={styles.cartUp}>
@@ -10,6 +12,7 @@ function Drawer(){
             <img
               className={styles.cartUp}
               src="/img/btn-remove.svg"
+              onClick={props.onCloseCart}
               alt="Remove"
             />
           </h2>
@@ -24,7 +27,7 @@ function Drawer(){
                 <p className={styles.cartItemParagraph}>
                   Мужские Кроссовки Nike Air Max 270
                 </p>
-                <b className={styles.cartItemP}>12 999 руб.</b>
+                <b className={styles.cartItemPrice}>12 999 руб.</b>
               </div>
               <img
                 className={styles.removeBtn}
@@ -43,7 +46,7 @@ function Drawer(){
                 <p className={styles.cartItemParagraph}>
                   Мужские Кроссовки Nike Air Max 270
                 </p>
-                <b className={styles.cartItemP}>12 999 руб.</b>
+                <b className={styles.cartItemPrice}>12 999 руб.</b>
               </div>
               <img
                 className={styles.removeBtn}
@@ -60,10 +63,10 @@ function Drawer(){
               <div className={styles.dots}></div>
               <b className={styles.cartTotalPrice}>21 498 руб.</b>
             </li>
-            <li>
+            <li className={styles.cartTotalLi}>
               <span>Налог 5%:</span>
-              <div></div>
-              <b>1074 руб.</b>
+              <div className={styles.dots}></div>
+              <b className={styles.cartTotalPrice}>1074 руб.</b>
             </li>
           </ul>
           <button className={styles.greenButton}>
