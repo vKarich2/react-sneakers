@@ -2,7 +2,7 @@ import styles from './Drawer.module.scss'
 
 function Drawer(props){
   
-
+/**/
 	return (
     <div className={styles.drawerOverlay}>
       <div className={styles.drawer}>
@@ -36,7 +36,7 @@ function Drawer(props){
               />
             </div>
 
-            <div className={styles.cartItem}>
+            <div className={styles.cartItem}> 
               <div
                 style={{ backgroundImage: "url(/img/sneakers/2.jpg)" }}
                 className={styles.cartItemImg}
